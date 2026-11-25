@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+test-results.xml
+.git
+.github
+test
+Jenkinsfile
+README.md
+*.md
