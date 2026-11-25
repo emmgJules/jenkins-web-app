@@ -94,7 +94,8 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Package source code
-        run: tar --exclude=.git --exclude=node_modules -czf jenkins-web-app-${{ env.VERSION }}.tar.gz .
+        # git archive packs only tracked files (tar of "." failed: the archive was written into the folder it was reading)
+        run: git archive --format=tar.gz --prefix=jenkins-web-app-${{ env.VERSION }}/ -o jenkins-web-app-${{ env.VERSION }}.tar.gz HEAD
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
