@@ -20,7 +20,7 @@ function createApp() {
 </style></head>
 <body><main>
   <h1>Hello from the Jenkins CI/CD pipeline!</h1>
-  <p>This Node.js web app was built, tested and deployed automatically.</p>
+  <p>This Node.js web app was built, tested and deployed automatically by Jenkins after a push to GitHub.</p>
   <table>
     <tr><td>Version</td><td><code>${VERSION}</code></td></tr>
     <tr><td>Environment</td><td><code>${ENVIRONMENT}</code></td></tr>
